@@ -11,7 +11,6 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -41,7 +40,6 @@ public class SpreadListViewAdapter extends BaseAdapter{
         if(convertView == null) {    
             viewHolder = new ViewHolder();
             convertView = inflater.inflate(mResource, null);
-            convertView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
     		viewHolder.llyt_show = (LinearLayout) convertView.findViewById(R.id.llyt_show);
     		viewHolder.llyt_hide = (LinearLayout) convertView.findViewById(R.id.llyt_hide);
     		viewHolder.txt_show = (TextView) convertView.findViewById(R.id.txt_show);
@@ -53,7 +51,7 @@ public class SpreadListViewAdapter extends BaseAdapter{
         Data data = (Data)getItem(position);
         //convertView.setBackgroundColor(pickColor(data.showStr));
 		viewHolder.llyt_show.setBackgroundColor(pickColor(data.showStr));
-		viewHolder.llyt_show.setAlpha(0.8F);
+		//viewHolder.llyt_show.setAlpha(0.8F);
 		viewHolder.llyt_hide.setBackgroundColor(pickColor(data.showStr));
         viewHolder.txt_show.setText(data.showStr);
         viewHolder.txt_hide.setText(data.hideStr);
