@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
 	private SpreadListView spreadListView;
 	private SpreadListViewAdapter adapter;
 	private List<Data> dataList;
-	private int count = 5;
+	private int count = 0;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
