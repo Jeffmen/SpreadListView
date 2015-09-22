@@ -506,7 +506,7 @@ public class SpreadListView extends AdapterView<BaseAdapter> {
             @Override  
             public void onAnimationEnd(Animator animation) {  
         		animationIsDoing = false;
-            	if(!openViewExist){
+            	if(position > openPosition && !openViewExist){
             		//但整个页面没有打开的页面时，点击的页面打开后，使mMaxY没有增长originalHeight*2, 所以减小mNextY的值
             		mNextY += -originalHeight*2;
             		notMove = true;
